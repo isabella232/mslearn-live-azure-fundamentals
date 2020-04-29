@@ -1,0 +1,21 @@
+<div>
+    <h2 class="display-2">Products</h2>
+    <p *ngIf="items == null || items.length == 0">Loading products...</p>
+    <div *ngFor="let item of this.items">
+        <table>
+            <tr>
+                <td width="130">
+                    <a [routerLink]="['/product/' + item.id]">
+                        <p class="center"><img width="80" height="80" src="{{item.thumbnailImage}}" alt="{{ item.name}}"/></p>
+                    </a> 
+                </td>        
+                <td>        
+                    <p class="lead">{{ item.name }} - {{ formatter.CurrencyDisplay(item.price) }}</p>
+                    <p class="small">{{ item.description}}</p>        
+                    <p><button (click)="addToCart(item)">Add to cart</button></p>
+                </td>
+            </tr>            
+        </table>
+        <hr/>
+    </div>
+</div>

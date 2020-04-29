@@ -1,0 +1,18 @@
+.navbar
+{
+    background-color: darkslateblue;
+    color: whitesmoke;
+}
+
+.navbar a 
+{
+    color: whitesmoke;
+    margin-left: 30px;
+    margin-right: 10px;
+    font-size: 95%;
+}
+
+.brand 
+{
+    font-weight: bolder;
+}
