@@ -32,9 +32,13 @@ az cosmosdb sql database create --name $databaseName --account-name $cosmosDbIns
 
 # Create a container in the database
 printf "Creating a container named '%s' in database '%s'.\n" $containerName $databaseName
-az cosmosdb sql container create --name $containerName --partition-key-path /id --account-name $cosmosDbInstanceName --database-name $databaseName
+az cosmosdb sql container create --name $containerName --partition-key-path /pk --account-name $cosmosDbInstanceName --database-name $databaseName
 
 # Get the primary connection string
 printf "Getting primary connection string for instance '%s'.\n" $cosmosDbInstanceName
 connectionString=$(az cosmosdb keys list --name $cosmosDbInstanceName --type connection-strings --query 'connectionStrings[0].connectionString' --output tsv)
-printf "Use this connection string:\n\n%s\n\n" $connectionString
+masterKey=$(az cosmosdb keys list --name $comsosDbInstanceName --query primaryMasterKey --output tsv)
+
+printf "Cosmos DB instance name: " $cosmosDbInstanceName
+printf "Cosmos DB master key: " $masterKey
+printf "Connection string:\n\n%s\n\n" $connectionString
