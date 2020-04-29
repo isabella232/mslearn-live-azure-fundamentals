@@ -65,5 +65,10 @@ echo "URL: $url"
 
 partitionKeyValue="default"
 
-documentJson="sampleproduct1.json"
-az rest --verbose -m $verb -b "@$documentJson" -u $url --headers x-ms-date="$now" x-ms-documentdb-partitionkey=[\"$partitionKeyValue\"] x-ms-documentdb-is-upsert=$isUpsert x-ms-version=2018-12-31 x-ms-documentdb-isquery=true Content-Type=application/json Authorization=$urlEncodedAuthString
+for prodId in {1..10}
+do
+    echo "Creating product data $prodId..."
+    documentJson="sampleproduct$prodId.json"
+    wget -O $documentJson https://raw.githubusercontent.com/MicrosoftDocs/mslearn-live-azure-fundamentals/master/scripts/sampledata/$documentJson
+    az rest --verbose -m $verb -b "@$documentJson" -u $url --headers x-ms-date="$now" x-ms-documentdb-partitionkey=[\"$partitionKeyValue\"] x-ms-documentdb-is-upsert=$isUpsert x-ms-version=2018-12-31 x-ms-documentdb-isquery=true Content-Type=application/json Authorization=$urlEncodedAuthString
+done
