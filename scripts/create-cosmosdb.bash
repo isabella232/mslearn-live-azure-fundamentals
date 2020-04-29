@@ -6,7 +6,7 @@
 suffix=$RANDOM
 cosmosDbInstanceName="dbbacktoschool$suffix"
 databaseName="maindb"
-containerName="data"
+containerName="products"
 location="centralus"
 
 # Only needed when executing locally and not in Cloud Shell

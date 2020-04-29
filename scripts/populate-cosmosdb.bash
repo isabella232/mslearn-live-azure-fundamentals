@@ -7,7 +7,7 @@ comsosDbInstanceName=$1
 masterKey=$2
 
 dbName="maindb"
-containerName="data"
+containerName="products"
 partitionKeyName="pk"
 
 # If TRUE provided document can be created or updated automatically.
