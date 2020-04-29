@@ -353,4 +353,4 @@ MigrationBackup/
 .ionide/
 
 **/.DS_Store
-code/api/local.settings.json
+**/local.settings.json
