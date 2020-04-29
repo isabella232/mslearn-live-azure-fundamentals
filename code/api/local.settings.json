@@ -2,6 +2,9 @@
   "IsEncrypted": false,
   "Values": {
     "AzureWebJobsStorage": "",
-    "FUNCTIONS_WORKER_RUNTIME": "node"
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "CONNECTION_STRING": "AccountEndpoint=https://dbbacktoschool.documents.azure.com:443/;AccountKey=t7ejJOwk0HEgkeYCm9v3n8vNwVaW27uriUmTTc3JcBtwqHBfwqO1tAJqKOBpeivurzPl1DxsNFUehEQN5lzGRw==;",
+    "COSMOS_DB_NAME": "maindb",
+    "COSMOS_DB_CONTAINER": "products"
   }
 }
