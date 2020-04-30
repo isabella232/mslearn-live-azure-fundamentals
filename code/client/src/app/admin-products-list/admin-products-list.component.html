@@ -1,0 +1,31 @@
+<div>
+    <h2 class="display-2">Products Administration</h2>
+    <p *ngIf="items == null || items.length == 0">Loading products...</p>
+
+    <p>
+        <a class="center" [routerLink]="['/admin/product/$new']">
+            New product
+        </a>
+    </p>
+
+    <table>
+        <div *ngFor="let item of this.items">
+            <tr>
+                <td>
+                    <a [routerLink]="['/admin/product/' + item.id]">
+                        <p class="center"><img width="40" src="assets/images/{{item.thumbnailImage}}" alt="{{ item.name}}"/></p>
+                    </a> 
+                </td>        
+                <td>&nbsp;</td>
+                <td>
+                    {{ item.name }} - {{ formatter.CurrencyDisplay(item.price) }}
+                    <p>
+                        <a class="center" [routerLink]="['/admin/product/' + item.id]">
+                            Edit
+                        </a>
+                    </p>
+                </td>
+            </tr>            
+        </div>
+    </table>
+</div>

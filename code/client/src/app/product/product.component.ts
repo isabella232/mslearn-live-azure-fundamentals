@@ -19,12 +19,11 @@ export class ProductComponent implements OnInit {
     this.data = dataClient;
     this.formatter = formatter;
     this.id = route.snapshot.paramMap.get("productId");
-    this.data.GetProduct(this.id);
-    this.hasLoaded = true;
   }
   
-  ngOnInit(): void {
-    
+  async ngOnInit() {
+    await this.data.GetProduct(this.id);
+    this.hasLoaded = true;    
   }
 
   addToCart(product: Product)

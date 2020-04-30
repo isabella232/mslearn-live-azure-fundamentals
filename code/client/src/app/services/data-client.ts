@@ -17,7 +17,7 @@ export class DataClient {
     {
     }    
 
-    public LoadProducts()
+    public async LoadProducts()
     {
         if (this.hasLoaded)
         {
@@ -26,42 +26,34 @@ export class DataClient {
         
         this.isLoading = true;
 
-        this.http.get(this.BaseApiLocation + "products").subscribe(result => {
-            if (result != null)
-            {
-                this.allProducts.length = 0;
-                let response = result as ProductsList;
-                response.resources.forEach(element => {
-                    this.allProducts.push(element);
-                });
-                this.isLoading = false;
-                this.hasLoaded = true;
-            }
-        }, error => {
-            console.error(error);
-            this.isLoading = false;
-            this.hasLoaded = false;
-        });
+        const result = await this.http.get(this.BaseApiLocation + "products").toPromise();
+        if (result != null)
+        {
+            this.allProducts.length = 0;
+            let response = result as ProductsList;
+            response.resources.forEach(element => {
+                this.allProducts.push(element);
+            });
+            this.hasLoaded = true;    
+        }
+        this.isLoading = false;
     }
 
     public isLoadingProduct: boolean = true;
     public LoadedProduct: Product;
 
-    public GetProduct(id: string)
+    public async GetProduct(id: string): Promise<any>
     {
         this.isLoadingProduct = true;
 
-        this.http.get(this.BaseApiLocation + "product/" + id).subscribe(result => {
-            if (result != null)
-            {
-                let response = result as ProductsList;
-                this.LoadedProduct = response.resources[0];
-                this.isLoadingProduct = false;
-            }
-        }, error => {
-            console.error(error);
-            this.isLoadingProduct = false;
-        });
+        const result = await this.http.get(this.BaseApiLocation + "product/" + id).toPromise();
+        if (result != null)
+        {
+            let response = result as ProductsList;
+            this.LoadedProduct = response.resources[0];
+        }
+
+        this.isLoadingProduct = false;
     }
 }
 

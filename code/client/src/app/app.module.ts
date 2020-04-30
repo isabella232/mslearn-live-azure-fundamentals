@@ -5,22 +5,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsListComponent } from './products-list/products-list.component';
+import { AdminProductsListComponent } from './admin-products-list/admin-products-list.component';
+import { AdminProductComponent } from './admin-product/admin-product.component';
 import { ProductComponent } from './product/product.component';
 import { AboutComponent } from './about/about.component';
 import { NavmenuComponent } from './navmenu/navmenu.component';
-import { DataClient } from './services/data-client';
 import { RouterModule } from '@angular/router';
-import { Product } from './models/Product';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsListComponent,
+    AdminProductsListComponent,
     ProductComponent,
+    AdminProductComponent,
     AboutComponent,
     NavmenuComponent,
   ],
@@ -33,6 +32,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       { path: 'home', component: AboutComponent },
       { path: 'product/:productId', component: ProductComponent },
       { path: 'products', component: ProductsListComponent },
+      { path: 'admin/products', component: AdminProductsListComponent },
+      { path: 'admin/product/:productId', component: AdminProductComponent },
       { path: '**', redirectTo: 'home' }
     ])
   ],

@@ -1,0 +1,61 @@
+<h2>Edit product</h2>
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col">
+    
+    <label>
+      Product&nbsp;Code:
+      <input size="10" type="text" formControlName="id" required>
+    </label>
+
+    <label>
+        Name:
+        <input size="50" type="text" formControlName="name" required>
+      </label>
+  
+    <label>
+      Description:
+      <input size="50" type="text" formControlName="description" required>
+    </label>
+
+    <label>
+        Category:
+        <input size="20" type="text" formControlName="category" required>
+    </label>
+
+    <label>
+        Price:
+        <input size="20" type="text" formControlName="price" required>
+    </label>
+
+    <label>
+        Stock units:
+        <input size="10" type="text" formControlName="stockUnits" required>
+    </label>
+  
+    <button type="input" [disabled]="!productForm.valid">Save</button>
+</div>
+</div>
+
+</form>
+
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <label>
+                Name:
+                <input type="text" [formControl]="data?.LoadedProduct?.name">
+              </label>
+            <h2 class="mt-5 display-3">{{ data?.LoadedProduct?.name }}</h2>
+            <p>Category: {{ data?.LoadedProduct?.category }}</p>
+            
+            <p>{{ data?.LoadedProduct?.description }}</p>
+            <p>Price: {{ data?.LoadedProduct != null ? formatter.CurrencyDisplay(data?.LoadedProduct?.price) : "" }}</p>
+
+            <p >In stock: {{ data?.LoadedProduct?.stockUnits }}</p>
+        </div>
+    </div>
+</div>
+-->
