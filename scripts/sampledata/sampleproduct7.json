@@ -1,5 +1,10 @@
 {
-    "id": "prod007",
-    "name": "Product 7",
-    "pk": "default"    
-}
+    "id": "p007",
+    "itemType": "product",
+    "name": "Clear Sheet Protectors",
+    "description": "Stores and protects sheets.",
+    "price": 999,
+    "category": "Paper",
+    "stockUnits": 1500,
+    "thumbnailImage": "p007.png"
+  }

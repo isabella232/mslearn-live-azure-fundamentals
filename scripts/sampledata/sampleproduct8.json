@@ -1,5 +1,10 @@
 {
-    "id": "prod008",
-    "name": "Product 8",
-    "pk": "default"    
-}
+    "id": "p008",
+    "itemType": "product",
+    "name": "Eraser",
+    "description": "Design helps erase both details and large areas",
+    "price": 1230,
+    "category": "Erasers",
+    "stockUnits": 1100,
+    "thumbnailImage": "p008.png"
+  }

@@ -3,7 +3,6 @@ import { CosmosClient } from "@azure/cosmos";
 import { DataConnection } from "../helper/DataConnection";
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
-    // Example Query: SELECT * FROM c where c.itemType = "product" and c.id = "cap"
     const id = req.params.id;
     if (id == null)
     {
@@ -20,7 +19,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         let container = data.GetContainer();
 
         var query: any = {
-            query: "select * from product p where p.itemType = 'product' and p.id = @id",
+            query: "select * from data p where p.itemType = 'product' and p.id = @id",
             parameters: [
                 {
                     name: "@id",

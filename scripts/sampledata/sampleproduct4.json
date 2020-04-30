@@ -1,5 +1,10 @@
 {
-    "id": "prod004",
-    "name": "Product 4",
-    "pk": "default"    
-}
+    "id": "p004",
+    "itemType": "product",
+    "name": "Ruled Lined Index Cards",
+    "description": "100 pack of white cards; ruled on one side",
+    "price": 399,
+    "category": "Paper",
+    "stockUnits": 400,
+    "thumbnailImage": "p004.png"
+  }

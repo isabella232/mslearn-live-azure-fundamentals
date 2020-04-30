@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/Product';
 import { DataClient } from '../services/data-client';
-import { ShoppingCart } from '../models/ShoppingCart';
 import { FormattingHelpers } from '../services/FormattingHelpers';
 
 @Component({
@@ -13,13 +12,11 @@ export class ProductsListComponent implements OnInit {
 
   public items: Product[];
   public store: DataClient;
-  public cart: ShoppingCart;
   public formatter: FormattingHelpers;
   public loaded: boolean = false;
 
-  constructor(dataClient: DataClient, globalCart: ShoppingCart, formatter: FormattingHelpers) { 
+  constructor(dataClient: DataClient, formatter: FormattingHelpers) { 
     this.store = dataClient;
-    this.cart = globalCart;    
     this.formatter = formatter;
     this.loadItems();
   }
@@ -36,6 +33,5 @@ export class ProductsListComponent implements OnInit {
   
   public addToCart(product: Product)
   {
-    this.cart.AddItemToCart(product, 1);
   }
 }

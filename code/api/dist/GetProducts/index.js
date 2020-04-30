@@ -17,7 +17,7 @@ const httpTrigger = function (context, req) {
             let data = new DataConnection_1.DataConnection();
             let container = data.GetContainer();
             var query = {
-                query: "select * from product p where p.itemType = 'product'"
+                query: "select * from data p where p.itemType = 'product'"
             };
             let iterator = container.items.query(query);
             let resources = yield iterator.fetchAll();

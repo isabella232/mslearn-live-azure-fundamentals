@@ -7,8 +7,8 @@ comsosDbInstanceName=$1
 masterKey=$2
 
 dbName="maindb"
-containerName="products"
-partitionKeyName="pk"
+containerName="data"
+partitionKeyName="itemType"
 
 # If TRUE provided document can be created or updated automatically.
 # If FALSE and an existing "id" is provided, there will be an error.

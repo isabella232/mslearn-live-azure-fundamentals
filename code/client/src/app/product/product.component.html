@@ -1,20 +1,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <img style="margin-top: 50px;" src="{{data.LoadedProduct.thumbnailImage}}" class="img-thumbnail" />
+            <img style="margin-top: 50px;" src="assets/images/{{data?.LoadedProduct?.thumbnailImage}}" class="img-thumbnail" />
         </div>
         <div class="col-md-8">
-            <h2 class="mt-5 display-3">{{ data.LoadedProduct.name }}</h2>
-            <p><span *ngFor="let cat of data.LoadedProduct.categories">{{ cat }} </span></p>
+            <h2 class="mt-5 display-3">{{ data?.LoadedProduct?.name }}</h2>
+            <p>Category: {{ data?.LoadedProduct?.category }}</p>
+            
+            <p>{{ data?.LoadedProduct?.description }}</p>
+            <p>Price: {{ data?.LoadedProduct != null ? formatter.CurrencyDisplay(data?.LoadedProduct?.price) : "" }}</p>
 
-            <p>{{ data.LoadedProduct.description }}</p>
-            <p>Price: {{ formatter.CurrencyDisplay(data.LoadedProduct.price) }}</p>
-
-            <p >In stock: {{ data.LoadedProduct.stockUnits }}</p>
-            <p *ngElse>Out of stock</p>
-            <p *ngIf="data.LoadedProduct.stockUnits > 0">
-                <button class="button is-primary" (click)="addToCart(data.LoadedProduct)">Add to cart</button>
-            </p>
+            <p >In stock: {{ data?.LoadedProduct?.stockUnits }}</p>
         </div>
     </div>
 </div>

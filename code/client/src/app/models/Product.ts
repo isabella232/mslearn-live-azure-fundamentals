@@ -4,11 +4,8 @@ export class Product {
     name: string;
     description: string;
     price: number;
-    categories: string[];
+    category: string;
     stockUnits: number;
-    reorderAmount: number;
-    autoOrderAmount: number;
-    productsOnOrder: number;
     thumbnailImage: string;
 
     Product() {

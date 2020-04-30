@@ -1,5 +1,10 @@
 {
-    "id": "prod003",
-    "name": "Product 3",
-    "pk": "default"    
-}
+    "id": "p003",
+    "itemType": "product",
+    "name": "Washable School Glue Sticks",
+    "description": "Effectively adheres items together, including paper, photos, and fabric",
+    "price": 1360,
+    "category": "Glue",
+    "stockUnits": 300,
+    "thumbnailImage": "p003.png"
+  }

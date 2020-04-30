@@ -1,5 +1,10 @@
 {
-    "id": "prod005",
-    "name": "Product 5",
-    "pk": "default"    
-}
+    "id": "p005",
+    "itemType": "product",
+    "name": "Mechanical Pencil",
+    "description": "Precision and accuracy. Comes with fine 0.5mm leads ",
+    "price": 699,
+    "category": "Pencils",
+    "stockUnits": 500,
+    "thumbnailImage": "p005.png"
+  }

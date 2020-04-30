@@ -1,5 +1,10 @@
 {
-    "id": "prod001",
-    "name": "Product 1",
-    "pk": "default"    
-}
+    "id": "p001",
+    "itemType": "product",
+    "name": "Pre-sharpened Wood Cased Pencils",
+    "description": "Rounded hexagonal shape with satin-smooth finish for a secure, comfortable grip",
+    "price": 499,
+    "category": "Writing",
+    "stockUnits": 100,
+    "thumbnailImage": "p001.png"
+  }

@@ -1,5 +1,10 @@
 {
-    "id": "prod010",
-    "name": "Product 10",
-    "pk": "default"    
-}
+    "id": "p010",
+    "itemType": "product",
+    "name": "Adhesive Labels",
+    "description": "Mark any type of objects",
+    "price": 680,
+    "category": "Paper",
+    "stockUnits": 750,
+    "thumbnailImage": "p010.png"
+  }

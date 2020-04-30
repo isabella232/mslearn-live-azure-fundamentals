@@ -14,14 +14,6 @@ const httpTrigger = function (context, req) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             let data = new DataConnection_1.DataConnection();
-            let userid = yield data.GetUserIdFromToken(context);
-            if (userid == null) {
-                context.res = {
-                    status: 401,
-                    body: "There is no user authenticated to create a product"
-                };
-                return;
-            }
             let container = data.GetContainer();
             const productToCreate = req.body;
             let { resource } = yield container.items.create(productToCreate);

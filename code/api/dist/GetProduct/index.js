@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const DataConnection_1 = require("../helper/DataConnection");
 const httpTrigger = function (context, req) {
     return __awaiter(this, void 0, void 0, function* () {
-        // Example Query: SELECT * FROM c where c.itemType = "product" and c.id = "cap"
         const id = req.params.id;
         if (id == null) {
             context.res = {
@@ -25,7 +24,7 @@ const httpTrigger = function (context, req) {
             let data = new DataConnection_1.DataConnection();
             let container = data.GetContainer();
             var query = {
-                query: "select * from product p where p.itemType = 'product' and p.id = @id",
+                query: "select * from data p where p.itemType = 'product' and p.id = @id",
                 parameters: [
                     {
                         name: "@id",

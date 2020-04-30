@@ -6,7 +6,8 @@
 suffix=$RANDOM
 cosmosDbInstanceName="dbbacktoschool$suffix"
 databaseName="maindb"
-containerName="products"
+containerName="data"
+partitionKey="/itemType"
 location="centralus"
 
 # Only needed when executing locally and not in Cloud Shell
@@ -32,7 +33,7 @@ az cosmosdb sql database create --name $databaseName --account-name $cosmosDbIns
 
 # Create a container in the database
 printf "Creating a container named '%s' in database '%s'.\n" $containerName $databaseName
-az cosmosdb sql container create --name $containerName --partition-key-path /pk --account-name $cosmosDbInstanceName --database-name $databaseName
+az cosmosdb sql container create --name $containerName --partition-key-path $partitionKey --account-name $cosmosDbInstanceName --database-name $databaseName
 
 # Get the primary connection string
 printf "Getting primary connection string for instance '%s'.\n" $cosmosDbInstanceName

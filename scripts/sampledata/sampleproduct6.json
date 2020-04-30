@@ -1,5 +1,10 @@
 {
-    "id": "prod006",
-    "name": "Product 6",
-    "pk": "default"    
-}
+    "id": "p006",
+    "itemType": "product",
+    "name": "Calculator",
+    "description": "Rechargeable battery, different colors available",
+    "price": 11500,
+    "category": "Calculators",
+    "stockUnits": 200,
+    "thumbnailImage": "p006.png"
+  }

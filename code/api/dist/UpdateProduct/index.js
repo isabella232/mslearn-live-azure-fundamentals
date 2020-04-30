@@ -22,14 +22,6 @@ const httpTrigger = function (context, req) {
         }
         try {
             let data = new DataConnection_1.DataConnection();
-            let userid = yield data.GetUserIdFromToken(context);
-            if (userid == null) {
-                context.res = {
-                    status: 401,
-                    body: "There is no user authenticated to update the order"
-                };
-                return;
-            }
             let container = data.GetContainer();
             const productToUpdate = req.body;
             let { resource } = yield container.item(id, id).replace(productToUpdate);

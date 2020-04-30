@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/Product';
-import { ShoppingCart } from '../models/ShoppingCart';
 import { DataClient } from '../services/data-client';
 import { FormattingHelpers } from '../services/FormattingHelpers';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-product',
@@ -11,32 +11,23 @@ import { FormattingHelpers } from '../services/FormattingHelpers';
 })
 export class ProductComponent implements OnInit {
   data: DataClient;
-  cart: ShoppingCart;
   formatter: FormattingHelpers;
-  id: string = "cap";
+  id: string;
   hasLoaded: boolean;
   
-  constructor(dataClient: DataClient, globalCart: ShoppingCart, formatter: FormattingHelpers) { 
+  constructor(dataClient: DataClient, formatter: FormattingHelpers, route: ActivatedRoute) { 
     this.data = dataClient;
-    this.cart = globalCart;    
     this.formatter = formatter;
-    
-    this.id = "cap";
-    this.loadItems();
-  }
-
-  loadItems()
-  {
+    this.id = route.snapshot.paramMap.get("productId");
     this.data.GetProduct(this.id);
     this.hasLoaded = true;
   }
-
+  
   ngOnInit(): void {
     
   }
 
   addToCart(product: Product)
   {
-    this.cart.AddItemToCart(product, 1);
   }
 }

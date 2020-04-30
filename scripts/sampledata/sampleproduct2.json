@@ -1,5 +1,10 @@
 {
-    "id": "prod002",
-    "name": "Product 2",
-    "pk": "default"    
-}
+    "id": "p002",
+    "itemType": "product",
+    "name": "Hardcover A5 Size Dot Grid Wirebound/Spiral Notebook",
+    "description": "Transparent Hardcover well protect the notebook. 80g high-quality acid-free ivory white paper makes writing an enjoyable thing.",
+    "price": 850,
+    "category": "Paper",
+    "stockUnits": 200,
+    "thumbnailImage": "p002.png"
+  }

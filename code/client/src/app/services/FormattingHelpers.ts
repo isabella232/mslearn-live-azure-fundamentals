@@ -5,6 +5,6 @@ import { Injectable } from '@angular/core';
   })
 export class FormattingHelpers {
     CurrencyDisplay(amount: number) {
-        return "$" + amount.toFixed(2);
+        return "$" + (amount/100);
     }
 }

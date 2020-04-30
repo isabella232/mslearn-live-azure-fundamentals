@@ -6,13 +6,14 @@
             <tr>
                 <td width="130">
                     <a [routerLink]="['/product/' + item.id]">
-                        <p class="center"><img width="80" height="80" src="{{item.thumbnailImage}}" alt="{{ item.name}}"/></p>
+                        <p class="center"><img width="80" height="80" src="assets/images/{{item.thumbnailImage}}" alt="{{ item.name}}"/></p>
                     </a> 
                 </td>        
-                <td>        
-                    <p class="lead">{{ item.name }} - {{ formatter.CurrencyDisplay(item.price) }}</p>
+                <td>
+                    <a [routerLink]="['/product/' + item.id]">
+                        <p class="lead">{{ item.name }} - {{ formatter.CurrencyDisplay(item.price) }}</p>
+                    </a>
                     <p class="small">{{ item.description}}</p>        
-                    <p><button (click)="addToCart(item)">Add to cart</button></p>
                 </td>
             </tr>            
         </table>

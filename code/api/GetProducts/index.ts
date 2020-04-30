@@ -9,7 +9,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         let container = data.GetContainer();
 
         var query: any = {
-            query: "select * from product p where p.itemType = 'product'"
+            query: "select * from data p where p.itemType = 'product'"
         };
         let iterator = container.items.query(query);
         let resources = await iterator.fetchAll();

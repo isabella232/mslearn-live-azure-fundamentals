@@ -1,21 +1,12 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container-fluid">
-      <a class='brand' [routerLink]="['/home']">Book Sales</a>
+      <a class='brand' [routerLink]="['/home']">Back To School</a>
       <div class="nav">
         <ul class="nav">
           <li><a [routerLink]="['/products']">
               Products
             </a>
-          </li>
-          <li><a [routerLink]="['/cart']">
-              Shopping Cart ({{cart.TotalItemCount}})
-            </a></li>
-          <li *ngIf="!userMgr.IsLoggedIn"><a [routerLink]="['/login']">
-              Login</a>
-          </li>
-          <li *ngIf="userMgr.IsLoggedIn"><a [routerLink]="['/orders']">
-              Orders</a>
           </li>
         </ul>
       </div>

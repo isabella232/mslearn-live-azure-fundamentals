@@ -1,5 +1,10 @@
 {
-    "id": "prod009",
-    "name": "Product 9",
-    "pk": "default"    
-}
+    "id": "p009",
+    "itemType": "product",
+    "name": "School scissor",
+    "description": "Different colors, perfect for children's small hands.",
+    "price": 799,
+    "category": "Scissors",
+    "stockUnits": 60,
+    "thumbnailImage": "p009.png"
+  }
