@@ -1,42 +1,44 @@
 <h2>Edit product</h2>
 
 <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-        <div class="row">
-            <div class="col">
-    
-    <label>
-      Product&nbsp;Code:
-      <input size="10" type="text" formControlName="id" required>
-    </label>
+  <div class="row">
+    <div class="col">
 
-    <label>
+      {{this.data.LoadedProduct.id}}
+
+      <label>
         Name:
         <input size="50" type="text" formControlName="name" required>
       </label>
-  
-    <label>
-      Description:
-      <input size="50" type="text" formControlName="description" required>
-    </label>
 
-    <label>
+      <label>
+        Description:
+        <input size="50" type="text" formControlName="description" required>
+      </label>
+
+      <label>
         Category:
         <input size="20" type="text" formControlName="category" required>
-    </label>
+      </label>
 
-    <label>
+      <label>
         Price:
         <input size="20" type="text" formControlName="price" required>
-    </label>
+      </label>
 
-    <label>
+      <label>
         Stock units:
         <input size="10" type="text" formControlName="stockUnits" required>
-    </label>
-  
-    <button type="input" [disabled]="!productForm.valid">Save</button>
-</div>
-</div>
+      </label>
+
+      <label>
+        Thumbnail:
+        <input size="10" type="text" formControlName="thumbnailImage" required>
+      </label>
+
+      <button type="input" [disabled]="!productForm.valid">Save</button>
+    </div>
+  </div>
 
 </form>
 

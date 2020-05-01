@@ -20,7 +20,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
 
         const productToUpdate = req.body;
         
-        let { resource } = await container.item(id, id).replace(productToUpdate);
+        let { resource } = await container.items.replace(productToUpdate);
 
         context.res = {
             body: resource

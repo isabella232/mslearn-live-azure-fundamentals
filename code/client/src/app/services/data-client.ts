@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/Product';
 import { HttpClient, HttpHandler } from '@angular/common/http';
+import { Guid } from '../guid';
 
 @Injectable({
     providedIn: 'root',
@@ -53,6 +54,29 @@ export class DataClient {
             this.LoadedProduct = response.resources[0];
         }
 
+        this.isLoadingProduct = false;
+    }
+
+    public async UpsertProduct(product: Product): Promise<any>
+    {
+        this.isLoadingProduct = true;
+
+        let result: any;
+        try {
+            if(product.id == null)
+            {
+                product.id = Guid.newGuid();
+                result = await this.http.post(this.BaseApiLocation + "product", product).toPromise();    
+            }
+            else
+            {
+                result = await this.http.put(this.BaseApiLocation + "product/" + product.id, product).toPromise();    
+            }
+            
+        } catch (error) {
+           console.error(error); 
+        }
+        
         this.isLoadingProduct = false;
     }
 }
