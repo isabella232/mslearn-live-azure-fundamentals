@@ -1,7 +1,4 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
-import { CosmosClient } from "@azure/cosmos";
-import { DataConnection } from "../helper/DataConnection";
-import { stringify } from "querystring";
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<any> {
     // The ID of the product to be read is part of the URL and can be accessed as "productId"
@@ -14,6 +11,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     // The name "inputProduct" is defined in function.json.
     const loadedProduct = context.bindings.inputProduct;
 
+    // Return a 404 if the requested product wasn't found.
     if (loadedProduct == null) {
         return {
             res: {
@@ -23,8 +21,10 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
             }
         }
     }
-    
-   return {
+
+    // Return the product.
+    // Note how the product is part of the response: "res" is the name of the HTTP binding
+    return {
         res: {
             status: 200,
             headers: { "Content-Type": "application/json" },

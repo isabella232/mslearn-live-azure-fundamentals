@@ -31,8 +31,8 @@ export class DataClient {
         if (result != null)
         {
             this.allProducts.length = 0;
-            let response = result as ProductsList;
-            response.resources.forEach(element => {
+            let response = result["products"] as ProductsList;
+            response.forEach(element => {
                 this.allProducts.push(element);
             });
             this.hasLoaded = true;    
