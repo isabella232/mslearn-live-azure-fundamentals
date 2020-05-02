@@ -50,8 +50,7 @@ export class DataClient {
         const result = await this.http.get(this.BaseApiLocation + "product/" + id).toPromise();
         if (result != null)
         {
-            let response = result as ProductsList;
-            this.LoadedProduct = response.resources[0];
+            this.LoadedProduct = result["product"];
         }
 
         this.isLoadingProduct = false;
