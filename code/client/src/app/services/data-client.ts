@@ -59,6 +59,7 @@ export class DataClient {
     public async UpsertProduct(product: Product): Promise<any>
     {
         this.isLoadingProduct = true;
+        this.hasLoaded = false;
 
         let result: any;
         try {
