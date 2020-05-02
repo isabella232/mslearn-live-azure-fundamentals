@@ -1,26 +1,28 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
-import { DataConnection } from "../helper/DataConnection";
 
-const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
-    // Example Query: SELECT * FROM c where c.itemType = "product" 
-    try
-    {
-        let data = new DataConnection();
-        let container = data.GetContainer();
+const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<any> {
+    // CosmosDB bindings also support an array of data, not just single objects.
+    const loadedProducts = context.bindings.inputProducts;
 
-        var query: any = {
-            query: "select * from data p where p.itemType = 'product'"
-        };
-        let iterator = container.items.query(query);
-        let resources = await iterator.fetchAll();
+    // Return a 404 if the requested product wasn't found.
+    if (loadedProducts == null) {
+        return {
+            res: {
+                status: 404,
+                headers: { "Content-Type": "application/json" },
+                body: `Unable to load product list`
+            }
+        }
+    }
 
-        context.res = { body: resources };
-    } catch (err)
-    {
-        context.res = {
-            status: 500,
-            body: err.message
-          };
+    // Return the products.
+    // Note how the product is part of the response: "res" is the name of the HTTP binding
+    return {
+        res: {
+            status: 200,
+            headers: { "Content-Type": "application/json" },
+            body: { products: loadedProducts }
+        }
     }
 };
 

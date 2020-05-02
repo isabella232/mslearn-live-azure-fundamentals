@@ -14,6 +14,16 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outputProduct",
+      "databaseName": "maindb",
+      "collectionName": "data",
+      "createIfNotExists": "false",
+      "connectionStringSetting": "CONNECTION_STRING",
+      "partitionKey": "product"
     }
   ],
   "scriptFile": "../dist/CreateProduct/index.js"

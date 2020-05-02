@@ -31,8 +31,8 @@ export class DataClient {
         if (result != null)
         {
             this.allProducts.length = 0;
-            let response = result as ProductsList;
-            response.resources.forEach(element => {
+            let products = result["products"] as Product[];
+            products.forEach(element => {
                 this.allProducts.push(element);
             });
             this.hasLoaded = true;    
@@ -50,8 +50,7 @@ export class DataClient {
         const result = await this.http.get(this.BaseApiLocation + "product/" + id).toPromise();
         if (result != null)
         {
-            let response = result as ProductsList;
-            this.LoadedProduct = response.resources[0];
+            this.LoadedProduct = result["product"];
         }
 
         this.isLoadingProduct = false;
@@ -60,6 +59,7 @@ export class DataClient {
     public async UpsertProduct(product: Product): Promise<any>
     {
         this.isLoadingProduct = true;
+        this.hasLoaded = false;
 
         let result: any;
         try {
@@ -78,29 +78,5 @@ export class DataClient {
         }
         
         this.isLoadingProduct = false;
-    }
-}
-
-type postActionOperation = () => void;
-
-// Common Imports
-export interface Headers {
-    "x-ms-request-charge":           number;
-    "x-ms-documentdb-query-metrics": XMSDocumentdbQueryMetrics;
-}
-
-export interface XMSDocumentdbQueryMetrics {
-}
-
-// Product List imports
-export interface ProductsList {
-    resources:      Product[];
-    headers:        Headers;
-    hasMoreResults: boolean;
-}
-
-export class ProductListRequestConvert {
-    public static fromJson(json: string): ProductsList {
-        return JSON.parse(json);
     }
 }
