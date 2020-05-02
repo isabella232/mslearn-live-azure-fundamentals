@@ -31,8 +31,8 @@ export class DataClient {
         if (result != null)
         {
             this.allProducts.length = 0;
-            let response = result["products"] as ProductsList;
-            response.forEach(element => {
+            let products = result["products"] as Product[];
+            products.forEach(element => {
                 this.allProducts.push(element);
             });
             this.hasLoaded = true;    
@@ -77,29 +77,5 @@ export class DataClient {
         }
         
         this.isLoadingProduct = false;
-    }
-}
-
-type postActionOperation = () => void;
-
-// Common Imports
-export interface Headers {
-    "x-ms-request-charge":           number;
-    "x-ms-documentdb-query-metrics": XMSDocumentdbQueryMetrics;
-}
-
-export interface XMSDocumentdbQueryMetrics {
-}
-
-// Product List imports
-export interface ProductsList {
-    resources:      Product[];
-    headers:        Headers;
-    hasMoreResults: boolean;
-}
-
-export class ProductListRequestConvert {
-    public static fromJson(json: string): ProductsList {
-        return JSON.parse(json);
     }
 }
