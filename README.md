@@ -8,7 +8,7 @@ Where a typical Learn module focuses on one specific job task, e.g. migrate your
 
 ## Series overview
 
-![.github/workflows/deploytoazure.yml](https://github.com/MicrosoftDocs/mslearn-live-azure-fundamentals/workflows/.github/workflows/deploytoazure.yml/badge.svg)
+![Deploy Node.js project to Azure Function App](https://github.com/MicrosoftDocs/mslearn-live-azure-fundamentals/workflows/Deploy%20Node.js%20project%20to%20Azure%20Function%20App/badge.svg)
 
 It's time to go back to school and you're working on a solution for a school supplies retailer.
 In the past, they had users complain about slow website response times during the back-to-school time. 
