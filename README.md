@@ -8,6 +8,8 @@ Where a typical Learn module focuses on one specific job task, e.g. migrate your
 
 ## Series overview
 
+![.github/workflows/deploytoazure.yml](https://github.com/MicrosoftDocs/mslearn-live-azure-fundamentals/workflows/.github/workflows/deploytoazure.yml/badge.svg)
+
 TODO: Add description and link to series artifacts (module).
 
 ## Contributing
