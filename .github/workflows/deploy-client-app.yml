@@ -15,8 +15,7 @@
 name: Deploy client app to Azure
 
 on:
-  release:
-    types: [created]
+  [push]
 
 env:
   AZURE_WEBAPP_NAME: 'appbacktoschool'    # set this to your application's name
