@@ -1,3 +1,4 @@
+#!/bin/bash
 #############################################################################
 # Bash script using Azure CLI to create a document in CosmosDB
 # Docs: https://docs.microsoft.com/en-us/rest/api/cosmos-db/create-a-document
