@@ -34,13 +34,11 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
 
-    - name: 'Install npm dependencies'
-      run: npm install
-
     - name: 'Build Angular project'
       shell: bash
       run: |
         pushd './${{ env.ANGULAR_APP_FOLDER }}'
+        npm install
         npm run build -- --prod --build-optimizer
         popd
 
