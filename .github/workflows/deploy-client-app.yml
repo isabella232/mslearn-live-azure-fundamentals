@@ -38,7 +38,7 @@ jobs:
       shell: bash
       run: |
         pushd './${{ env.ANGULAR_APP_FOLDER }}'
-        ng build --prod --build-optimizer
+        npm run build -- --prod --build-optimizer
         popd
 
     - name: 'Setup .NET Environment for blob storage deployment action'
