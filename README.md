@@ -48,9 +48,51 @@ The client is an Angular SPA app. Find it under [src/app](src/app).
 
 If you're unfamiliar with Angular, you can find information how to deploy and run the client app by inspecting the [documentation](https://angular.io/start/start-deployment#building-locally).
 
+With all the tooling installed you can use the following command to test the client app locally and start serving the wesbite:
+
+`ng serve`
+
+Then navigate to `http://localhost:4200/`.
+
 ### Backend/API
 
 The HTTP API at [src/api](src/api) is powered by Azure functions. We recommend to run the functions project locally using Visual Studio Code and the [Azure functions core tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local).
+
+For developing locally, add `local.setting.json` file that stores your configuration settings. For example:
+
+```json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "CONNECTION_STRING": "AccountEndpoint=...",
+    "COSMOS_DB_NAME": "maindb",
+    "COSMOS_DB_CONTAINER": "data"
+  },
+  "Host": {
+    "CORS": "*"
+  }
+}
+```
+
+The products stored in the CosmosDB container must use the following format:
+
+```json
+{
+    "id": "p001",
+    "itemType": "product",
+    "name": "Pre-sharpened Wood Cased Pencils",
+    "description": "Rounded hexagonal shape with satin-smooth finish for a secure, comfortable grip",
+    "price": 499,
+    "category": "Writing",
+    "stockUnits": 100,
+    "thumbnailImage": "p001.png"
+}
+```
+
+You can find sample data in the [sample data](/scripts/sampledata) folder of this repo.
+Note that the container must use a **partition key** of `/itemType`.
 
 ## Series overview
 
