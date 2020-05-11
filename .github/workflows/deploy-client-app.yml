@@ -50,8 +50,8 @@ jobs:
     - name: 'Deploy to blob storage'
       uses: krumelur/Azure-Storage-Action@master
       with:
-        enabled-static-website: 'false'
-        #index-document: 'index.html'
-        #error-document: 'index.html' # For Angular apps with routing enabled, this must point to the index.html file because the requested routes don't exist phyiscally and blob storage would throw a 404.
+        enabled-static-website: 'true'
+        index-document: 'index.html'
+        error-document: 'index.html' # For Angular apps with routing enabled, this must point to the index.html file because the requested routes don't exist phyiscally and blob storage would throw a 404.
         folder: './${{ env.ANGULAR_APP_DIST_FOLDER }}'
         connection-string: ${{ secrets.BLOB_STORAGE_CONNECTION_STRING }}
