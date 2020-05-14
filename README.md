@@ -44,12 +44,12 @@ However, there's always more to discover. We invite you to check out the links b
 
 ### Setup and configure a local development environment that is independent of the cloud
 * Node.js _(External)_: https://nodejs.org/
+* Microsoft Docs TypeScript Functions guide _(Microsoft docs)_: https://docs.microsoft.com/azure/azure-functions/functions-reference-node#typescript
 * Create serverless logic with Azure Functions _(Learn module)_: https://docs.microsoft.com/learn/modules/create-serverless-logic-with-azure-functions/
 * Azure Functions JavaScript developer guide _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-reference-node
 * Example for different triggers _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings
 * Create a new Functions App in VScode _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-vs-code 
 * Testing Azure Functions in Visual Studio or VS Code _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-test-a-function#javascript-in-vs-code
-
 
 ### Implement advanced restful function HTTP API endpoints using Visual Studio Code
 * Build Serverless APIs with Azure Functions _(Learn module)_: https://docs.microsoft.com/learn/modules/build-api-azure-functions/
@@ -60,6 +60,7 @@ However, there's always more to discover. We invite you to check out the links b
 * Triggers and bindings _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings
 
 ### Prevent unauthorized access of the API during development
+* Authorization keys _(Microsoft docs)_: https://docs.microsoft.com/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=csharp#authorization-keys
 * Expose multiple Azure Function apps as a consistent API by using Azure API Management _(Learn module)_: https://docs.microsoft.com/learn/modules/build-serverless-api-with-functions-api-management/
 * API Management Learning Paths _(Learn module)_: https://docs.microsoft.com/en-au/learn/paths/architect-api-integration/
 * API Management integration with Functions _(Microsoft Docs)_: https://docs.microsoft.com/azure/api-management/import-function-app-as-api
