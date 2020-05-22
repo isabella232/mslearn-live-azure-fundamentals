@@ -18,10 +18,23 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
                 body: productToUpdate == null ? "No product data found in request body." : `The product ID '${productToUpdate["id"]}' provided in the request body does not match the product ID of '${productId}' in the URL route.`
             }
         }
-    }
+	}
+	
+	// Different options for handling output data and returning JSON to caller:
+	// 1. Either use context.res and context.bindings:
+	/*
+	context.res = {
+		status: 200,
+		headers: { "Content-Type": "application/json" },
+		body: { product: productToUpdate }
+	};
 
-    // Return the product back to the caller and also send to CosmosDB via the out binding.
-    return {
+	context.bindings.outputProduct = productToUpdate;
+	*/
+
+	// 2. Or out it all into the return statement (my preference) and change the functions return value to Promise<any>.
+	//    The HTTP response "res" is nothing but an output binding - go check it in function.json.
+	return {
         res: {
             status: 200,
             headers: { "Content-Type": "application/json" },
