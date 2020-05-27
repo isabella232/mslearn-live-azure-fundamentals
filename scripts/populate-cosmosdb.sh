@@ -64,7 +64,7 @@ echo "URL encoded auth string: $urlEncodedAuthString"
 url="$baseUrl$resourceLink"
 echo "URL: $url"
 
-partitionKeyValue="default"
+partitionKeyValue="product"
 
 for prodId in {1..10}
 do
