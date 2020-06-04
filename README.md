@@ -120,52 +120,52 @@ The series spans multiple sessions and we cover a variety of objectives that wil
 However, there's always more to discover. We invite you to check out the links below.
 
 ### Choose the best Azure service to design and implement a cost-efficient, and auto-scalable HTTP API
-* Why choose a serverless approach? _(Microsoft Docs)_: https://docs.microsoft.com/azure/architecture/serverless/code#why-choose-a-serverless-approach
-* Compute options decision tree _(Microsoft Docs)_: https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree
-* Learning Path "Create serverless applications" _(Learn modules)_: https://docs.microsoft.com/learn/paths/create-serverless-applications/
-* Explore Serverless computing in Azure _(Learn module)_: https://docs.microsoft.com/learn/modules/intro-to-azure-compute/6-serverless-computing
+* Why choose a serverless approach? _(Microsoft Docs)_: https://docs.microsoft.com/azure/architecture/serverless/code#why-choose-a-serverless-approach?WT.mc_id=learnlive-video-learn
+* Compute options decision tree _(Microsoft Docs)_: https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree?WT.mc_id=learnlive-video-learn
+* Learning Path "Create serverless applications" _(Learn modules)_: https://docs.microsoft.com/learn/paths/create-serverless-applications?WT.mc_id=learnlive-video-learn
+* Explore Serverless computing in Azure _(Learn module)_: https://docs.microsoft.com/learn/modules/intro-to-azure-compute/6-serverless-computing?WT.mc_id=learnlive-video-learn
 * Martin Fowler: What is serverless? _(External)_: https://martinfowler.com/articles/serverless.html
 
 ### Use Azure functions in the portal to configure your first basic HTTP API endpoint
-* Execute Azure Functions with triggers _(Learn module)_: https://docs.microsoft.com/learn/modules/execute-azure-function-with-triggers/
-* Azure Functions documentation _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/
+* Execute Azure Functions with triggers _(Learn module)_: https://docs.microsoft.com/learn/modules/execute-azure-function-with-triggers?WT.mc_id=learnlive-video-learn
+* Azure Functions documentation _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions?WT.mc_id=learnlive-video-learn
 
 ### Setup and configure a local development environment that is independent of the cloud
 * Node.js _(External)_: https://nodejs.org/
-* Microsoft Docs TypeScript Functions guide _(Microsoft docs)_: https://docs.microsoft.com/azure/azure-functions/functions-reference-node#typescript
-* Create serverless logic with Azure Functions _(Learn module)_: https://docs.microsoft.com/learn/modules/create-serverless-logic-with-azure-functions/
-* Azure Functions JavaScript developer guide _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-reference-node
-* Example for different triggers _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings
-* Create a new Functions App in VScode _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-vs-code 
-* Testing Azure Functions in Visual Studio or VS Code _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-test-a-function#javascript-in-vs-code
+* Microsoft Docs TypeScript Functions guide _(Microsoft docs)_: https://docs.microsoft.com/azure/azure-functions/functions-reference-node?WT.mc_id=learnlive-video-learn#typescript
+* Create serverless logic with Azure Functions _(Learn module)_: https://docs.microsoft.com/learn/modules/create-serverless-logic-with-azure-functions?WT.mc_id=learnlive-video-learn
+* Azure Functions JavaScript developer guide _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-reference-node?WT.mc_id=learnlive-video-learn
+* Example for different triggers _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?WT.mc_id=learnlive-video-learn
+* Create a new Functions App in VScode _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-vs-code?WT.mc_id=learnlive-video-learn
+* Testing Azure Functions in Visual Studio or VS Code _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-test-a-function#javascript-in-vs-code?WT.mc_id=learnlive-video-learn
 
 ### Implement advanced restful function HTTP API endpoints using Visual Studio Code
-* Build Serverless APIs with Azure Functions _(Learn module)_: https://docs.microsoft.com/learn/modules/build-api-azure-functions/
-* Develop, test, and publish Azure Functions by using Azure Functions Core Tools (CLI) _(Learn module)_: https://docs.microsoft.com/learn/modules/develop-test-deploy-azure-functions-with-core-tools/
+* Build Serverless APIs with Azure Functions _(Learn module)_: https://docs.microsoft.com/learn/modules/build-api-azure-functions?WT.mc_id=learnlive-video-learn
+* Develop, test, and publish Azure Functions by using Azure Functions Core Tools (CLI) _(Learn module)_: https://docs.microsoft.com/learn/modules/develop-test-deploy-azure-functions-with-core-tools?WT.mc_id=learnlive-video-learn
 
 ### Configure bindings to access CosmosDB and perform CRUD operations
-* Chain Azure Functions together using input and output bindings _(Learn module)_: https://docs.microsoft.com/learn/modules/chain-azure-functions-data-using-bindings/
-* Triggers and bindings _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings
+* Chain Azure Functions together using input and output bindings _(Learn module)_: https://docs.microsoft.com/learn/modules/chain-azure-functions-data-using-bindings?WT.mc_id=learnlive-video-learn
+* Triggers and bindings _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?WT.mc_id=learnlive-video-learn
 
 ### Prevent unauthorized access of the API during development
-* Authorization keys _(Microsoft docs)_: https://docs.microsoft.com/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=csharp#authorization-keys
-* Expose multiple Azure Function apps as a consistent API by using Azure API Management _(Learn module)_: https://docs.microsoft.com/learn/modules/build-serverless-api-with-functions-api-management/
-* API Management Learning Paths _(Learn module)_: https://docs.microsoft.com/en-au/learn/paths/architect-api-integration/
-* API Management integration with Functions _(Microsoft Docs)_: https://docs.microsoft.com/azure/api-management/import-function-app-as-api
+* Authorization keys _(Microsoft docs)_: https://docs.microsoft.com/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=csharp&WT.mc_id=learnlive-video-learn#authorization-keys
+* Expose multiple Azure Function apps as a consistent API by using Azure API Management _(Learn module)_: https://docs.microsoft.com/learn/modules/build-serverless-api-with-functions-api-management?WT.mc_id=learnlive-video-learn
+* API Management Learning Paths _(Learn module)_: https://docs.microsoft.com/learn/paths/architect-api-integration?WT.mc_id=learnlive-video-learn
+* API Management integration with Functions _(Microsoft Docs)_: https://docs.microsoft.com/azure/api-management/import-function-app-as-api?WT.mc_id=learnlive-video-learn
 
 ### Choose the optimal Azure service plan for your business requirements
-* Azure Functions scale and hosting (Premium Plan, Consumption Plan) _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-scale
+* Azure Functions scale and hosting (Premium Plan, Consumption Plan) _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-scale?WT.mc_id=learnlive-video-learn
 
 ### Configure GitHub actions as a CI/CD pipeline for the API project
-* Automate Azure Functions deployments with Azure Pipelines _(Learn module)_: https://docs.microsoft.com/learn/modules/deploy-azure-functions/
-* Continuous delivery of Function Apps using GitHub Actions _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-how-to-github-actions?tabs=javascript
-* Use Zip deployment to publish a functions project manually _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/deployment-zip-push
-* Deploy Azure Functions from VScode _(Microsoft Docs)_: https://docs.microsoft.com/azure/javascript/tutorial-vscode-serverless-node-01
-* Function deployment options _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-deployment-technologies
-* Benefits of running Functions app from a package _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/run-functions-from-deployment-package
+* Automate Azure Functions deployments with Azure Pipelines _(Learn module)_: https://docs.microsoft.com/learn/modules/deploy-azure-functions?WT.mc_id=learnlive-video-learn
+* Continuous delivery of Function Apps using GitHub Actions _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-how-to-github-actions?tabs=javascript&WT.mc_id=learnlive-video-learn
+* Use Zip deployment to publish a functions project manually _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/deployment-zip-push?WT.mc_id=learnlive-video-learn
+* Deploy Azure Functions from VScode _(Microsoft Docs)_: https://docs.microsoft.com/azure/javascript/tutorial-vscode-serverless-node-01?WT.mc_id=learnlive-video-learn
+* Function deployment options _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/functions-deployment-technologies?WT.mc_id=learnlive-video-learn
+* Benefits of running Functions app from a package _(Microsoft Docs)_: https://docs.microsoft.com/azure/azure-functions/run-functions-from-deployment-package?WT.mc_id=learnlive-video-learn
 
 ### Configure CORS to enable a client app to communicate with the API
-* Core Cloud Services - Set up CORS for your website and storage assets _(Learn module)_: https://docs.microsoft.com/learn/modules/set-up-cors-website-storage/
+* Core Cloud Services - Set up CORS for your website and storage assets _(Learn module)_: https://docs.microsoft.com/learn/modules/set-up-cors-website-storage?WT.mc_id=learnlive-video-learn
 
 ## Contributing
 
