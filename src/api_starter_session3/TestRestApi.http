@@ -1,0 +1,32 @@
+# Install the REST Client extension to execute the requests in this file.
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+# Get specific product
+GET http://localhost:7071/api/product/p001
+
+### 
+
+# Get all products
+GET http://localhost:7071/api/products
+
+###
+
+# Create a new product
+POST http://localhost:7071/api/product
+content-type: application/json
+
+{
+	"id":"new_product",
+	"name": "My new product"
+}
+
+###
+
+# Update an existing product
+PUT http://localhost:7071/api/p001
+content-type: application/json
+
+{
+	"id":"p001",
+	"name": "Updated name"
+}

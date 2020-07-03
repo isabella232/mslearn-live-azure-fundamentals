@@ -44,7 +44,7 @@ The client is an Angular SPA app. Find it under [src/app](src/app).
 
 If you're unfamiliar with Angular, you can find information how to deploy and run the client app by inspecting the [documentation](https://angular.io/start/start-deployment#building-locally).
 
-With all the tooling installed you can use the following command to test the client app locally and start serving the wesbite:
+With all the tooling installed you can use the following command to test the client app locally and start serving the website:
 
 `ng serve`
 
@@ -52,7 +52,9 @@ Then navigate to `http://localhost:4200/`.
 
 ### Backend/API
 
-The HTTP API at [src/api](src/api) is powered by Azure functions. We recommend to run the functions project locally using Visual Studio Code and the [Azure functions core tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local).
+The HTTP API at [src/api_completed](src/api_completed) is powered by Azure functions. We recommend to run the functions project locally using Visual Studio Code and the [Azure functions core tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local).
+
+**Note:** the folder [src/api_starter_session3](src/api_starter_session3) is a version of the API that does not connect to a CosmosDB instance. If you're following along our LIVE series, you can use this as the starting point for session three, where we add the database logic.
 
 For developing locally, add `local.setting.json` file that stores your configuration settings. For example:
 
