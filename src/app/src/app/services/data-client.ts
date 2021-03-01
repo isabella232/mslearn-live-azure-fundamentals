@@ -8,7 +8,7 @@ import { Guid } from '../guid';
   })  
 export class DataClient {
     //private BaseApiLocation: string = "http://localhost:7071/api/";
-    private BaseApiLocation: string = "https://apibacktoschool.azurewebsites.net/api/";
+    private BaseApiLocation: string = "https://apibacktoschool2.azurewebsites.net/api/";
 
     public allProducts: Product[] = [];
     public isLoading: boolean = true;
